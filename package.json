@@ -1,0 +1,21 @@
+{
+  "name": "khau-katta-workspace",
+  "version": "1.0.0",
+  "description": "Khau Katta - Belagavi Local Marketplace Platform (Full-Stack Foundation & Core UI)",
+  "scripts": {
+    "dev:backend": "npm.cmd --prefix backend run start",
+    "dev:frontend": "npm.cmd --prefix frontend run dev",
+    "build": "npm.cmd --prefix backend run build && npm.cmd --prefix frontend run build"
+  },
+  "keywords": [
+    "khau-katta",
+    "belagavi",
+    "marketplace",
+    "local-business",
+    "food-stalls",
+    "handlooms",
+    "silver-jewellery"
+  ],
+  "author": "Khau Katta Belagavi Team",
+  "license": "MIT"
+}

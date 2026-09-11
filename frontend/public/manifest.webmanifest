@@ -1,0 +1,26 @@
+{
+  "name": "Khau Katta — Belagavi Local Marketplace",
+  "short_name": "Khau Katta",
+  "description": "Discover and order from 50+ authentic food stalls, sweets, jewellery, and crafts in Belagavi with doorstep delivery.",
+  "start_url": "/",
+  "id": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#fcfbf9",
+  "theme_color": "#c2410c",
+  "categories": ["food", "shopping", "lifestyle"],
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}
