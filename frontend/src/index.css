@@ -1,0 +1,133 @@
+@import "tailwindcss";
+
+:root {
+  --brand-primary: #b85018; /* Warm Burnt Terracotta from Pinterest reference */
+  --brand-primary-hover: #963e0e;
+  --brand-secondary: #d97706; /* Saffron Warm Amber */
+  --brand-accent: #e89558; /* Warm Apricot Accent */
+  --brand-dark: #3c1e0a; /* Deep Roasted Warm Espresso */
+  --brand-peach-bg: #f9d6bd; /* Light Warm Peach Background */
+  --brand-cream-surface: #fff8f2; /* Cream Card Surface */
+  --brand-border: #f0bd9b; /* Soft Peach Border */
+}
+
+/* Custom Font Utilities */
+.font-serif {
+  font-family: 'Playfair Display', Georgia, Cambria, 'Times New Roman', Times, serif;
+}
+
+.font-sans {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+html, body {
+  background-color: #f8cfa8 !important;
+  background-image: 
+    radial-gradient(ellipse at 15% 10%, rgba(255, 248, 240, 0.75) 0%, transparent 45%),
+    radial-gradient(ellipse at 85% 20%, rgba(217, 100, 30, 0.18) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 85%, rgba(245, 175, 120, 0.22) 0%, transparent 60%),
+    linear-gradient(180deg, #fce3d0 0%, #f7c5a3 40%, #f4b88d 100%) !important;
+  background-attachment: fixed !important;
+  background-repeat: no-repeat !important;
+  color: #3c1e0a;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  scrollbar-gutter: stable;
+  overscroll-behavior-y: none;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+.theme-artisan-bg {
+  background-color: #f8cfa8 !important;
+  background-image: 
+    radial-gradient(ellipse at 15% 10%, rgba(255, 248, 240, 0.75) 0%, transparent 45%),
+    radial-gradient(ellipse at 85% 20%, rgba(217, 100, 30, 0.18) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 85%, rgba(245, 175, 120, 0.22) 0%, transparent 60%),
+    linear-gradient(180deg, #fce3d0 0%, #f7c5a3 40%, #f4b88d 100%) !important;
+  background-attachment: fixed !important;
+  background-repeat: no-repeat !important;
+  min-height: 100vh;
+}
+
+/* Custom Modern Badges & Buttons matching reference */
+.badge-terracotta {
+  background: linear-gradient(135deg, #b85018 0%, #a03c0c 100%);
+  color: #ffffff;
+}
+
+.badge-amber {
+  background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+  color: #ffffff;
+}
+
+.badge-cream {
+  background-color: #fff8f2;
+  color: #b85018;
+  border: 1px solid #f0bd9b;
+}
+
+.hero-gradient {
+  background: radial-gradient(circle at 10% 20%, rgba(184, 80, 24, 0.1) 0%, rgba(217, 119, 6, 0.05) 50%, rgba(255, 248, 240, 0) 100%);
+}
+
+.card-artisan {
+  background-color: rgba(255, 248, 242, 0.96);
+  border: 1px solid rgba(240, 189, 155, 0.85);
+  box-shadow: 0 8px 30px -4px rgba(184, 80, 24, 0.08), 0 2px 8px -2px rgba(60, 30, 10, 0.04);
+}
+
+.card-hover {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 35px -6px rgba(184, 80, 24, 0.16), 0 8px 16px -4px rgba(60, 30, 10, 0.06);
+}
+
+/* Form Input & Button Helper Utilities */
+.btn-primary {
+  background: linear-gradient(135deg, #b85018 0%, #a03a0a 100%);
+  color: #ffffff;
+  font-weight: 700;
+  border-radius: 9999px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(184, 80, 24, 0.25);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #a03e0e 0%, #882e05 100%);
+  box-shadow: 0 6px 18px rgba(184, 80, 24, 0.35);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background-color: #fff8f2;
+  color: #b85018;
+  border: 1px solid #f0bd9b;
+  font-weight: 700;
+  border-radius: 9999px;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #fcebdc;
+  color: #963e0e;
+  border-color: #b85018;
+}
+
+.input-artisan {
+  background-color: #fff8f2;
+  border: 1px solid #f0bd9b;
+  color: #3c1e0a;
+  border-radius: 1rem;
+  transition: all 0.2s ease;
+}
+
+.input-artisan:focus {
+  background-color: #ffffff;
+  border-color: #b85018;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(184, 80, 24, 0.2);
+}
+
