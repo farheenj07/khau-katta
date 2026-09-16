@@ -8,7 +8,10 @@ import {
   createStall,
   updateStall,
   toggleStallStatus,
+<<<<<<< HEAD
   toggleStallOpenStatus,
+=======
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
   deleteStall,
   hasStallOrders
 } from '../data/db';
@@ -244,6 +247,7 @@ router.patch('/:id/status', requireAuth, requireRole('admin'), (req: Request, re
   });
 });
 
+<<<<<<< HEAD
 // PATCH /api/stalls/:id/toggle-open - Toggle shop Open/Closed status
 router.patch('/:id/toggle-open', (req: Request, res: Response) => {
   const { id } = req.params;
@@ -271,6 +275,8 @@ router.patch('/:id/toggle-open', (req: Request, res: Response) => {
   });
 });
 
+=======
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
 // DELETE /api/stalls/:id - Delete stall where safe (Admin only)
 router.delete('/:id', requireAuth, requireRole('admin'), (req: Request, res: Response) => {
   const { id } = req.params;

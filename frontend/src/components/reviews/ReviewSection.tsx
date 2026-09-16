@@ -73,6 +73,7 @@ export const ReviewSection: React.FC<ReviewSectionProps> = ({ stallId, stallName
   };
 
   return (
+<<<<<<< HEAD
     <div className="space-y-8 bg-[#fff8f2]/95 rounded-3xl p-6 sm:p-8 border border-[#f0bd9b] shadow-xs backdrop-blur-sm font-sans">
       {/* Header with Title & Write Review Button */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-[#f0bd9b] pb-6">
@@ -85,13 +86,31 @@ export const ReviewSection: React.FC<ReviewSectionProps> = ({ stallId, stallName
             Customer Reviews &amp; Ratings
           </h3>
           <p className="text-xs text-[#7c4d2e]">
+=======
+    <div className="space-y-8 bg-[#fffdfb]/95 rounded-3xl p-6 sm:p-8 border border-[#eed7c2] shadow-xs backdrop-blur-sm">
+      {/* Header with Title & Write Review Button */}
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-[#eed7c2] pb-6">
+        <div>
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#faebd7] text-[#93370d] rounded-full text-xs font-bold mb-1.5 border border-[#eed7c2]">
+            <Sparkles size={12} className="text-[#c86228]" />
+            <span>Community Feedback</span>
+          </div>
+          <h3 className="text-xl sm:text-2xl font-black text-[#2e1b10] tracking-tight">
+            Customer Reviews &amp; Ratings
+          </h3>
+          <p className="text-xs text-[#735442]">
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
             Real experiences from verified Belagavi customers
           </p>
         </div>
 
         <button
           onClick={handleWriteReviewClick}
+<<<<<<< HEAD
           className="px-5 py-2.5 bg-[#b85018] hover:bg-[#963e0e] text-white font-bold text-xs rounded-xl shadow-xs transition-colors flex items-center gap-2 cursor-pointer self-start sm:self-auto"
+=======
+          className="px-5 py-2.5 bg-[#c86228] hover:bg-[#b0521e] text-white font-bold text-xs rounded-xl shadow-xs transition-colors flex items-center gap-2 cursor-pointer self-start sm:self-auto"
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
         >
           <MessageSquarePlus size={15} />
           <span>Write a Review</span>
@@ -100,6 +119,7 @@ export const ReviewSection: React.FC<ReviewSectionProps> = ({ stallId, stallName
 
       {/* Rating Breakdown & Distribution Bars */}
       {breakdown && (
+<<<<<<< HEAD
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 p-6 bg-[#fff0e2] rounded-3xl border border-[#f0bd9b]">
           {/* Left: Overall Score Card */}
           <div className="md:col-span-4 flex flex-col items-center justify-center text-center p-4 bg-[#fff8f2] rounded-2xl border border-[#f0bd9b] shadow-xs">
@@ -108,6 +128,16 @@ export const ReviewSection: React.FC<ReviewSectionProps> = ({ stallId, stallName
             </span>
             <StarRating rating={breakdown.averageRating} size={20} />
             <p className="text-xs text-[#7c4d2e] font-medium mt-2">
+=======
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 p-6 bg-[#fdf8f3] rounded-3xl border border-[#eed7c2]">
+          {/* Left: Overall Score Card */}
+          <div className="md:col-span-4 flex flex-col items-center justify-center text-center p-4 bg-[#fffdfb] rounded-2xl border border-[#eed7c2] shadow-xs">
+            <span className="text-4xl sm:text-5xl font-black text-[#2e1b10] leading-none mb-2">
+              {breakdown.averageRating > 0 ? breakdown.averageRating.toFixed(1) : '5.0'}
+            </span>
+            <StarRating rating={breakdown.averageRating} size={20} />
+            <p className="text-xs text-[#735442] font-medium mt-2">
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
               Based on <strong>{breakdown.totalReviews} verified reviews</strong>
             </p>
           </div>
@@ -123,8 +153,13 @@ export const ReviewSection: React.FC<ReviewSectionProps> = ({ stallId, stallName
                 <button
                   key={stars}
                   onClick={() => setRatingFilter(isFiltered ? undefined : stars)}
+<<<<<<< HEAD
                   className={`flex items-center gap-3 text-xs text-[#7c4d2e] hover:text-[#3c1e0a] transition-colors w-full group cursor-pointer ${
                     isFiltered ? 'font-bold text-[#b85018]' : ''
+=======
+                  className={`flex items-center gap-3 text-xs text-[#735442] hover:text-[#2e1b10] transition-colors w-full group cursor-pointer ${
+                    isFiltered ? 'font-bold text-[#c86228]' : ''
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
                   }`}
                 >
                   <span className="w-12 text-right flex items-center justify-end gap-1 font-semibold">
@@ -132,16 +167,27 @@ export const ReviewSection: React.FC<ReviewSectionProps> = ({ stallId, stallName
                     <Star size={12} className="fill-amber-400 text-amber-400" />
                   </span>
 
+<<<<<<< HEAD
                   <div className="flex-1 h-3 bg-[#f0bd9b]/50 rounded-full overflow-hidden">
                     <div
                       className={`h-full rounded-full transition-all duration-500 ${
                         stars >= 4 ? 'bg-[#b85018]' : stars === 3 ? 'bg-amber-500' : 'bg-rose-400'
+=======
+                  <div className="flex-1 h-3 bg-[#eed7c2]/60 rounded-full overflow-hidden">
+                    <div
+                      className={`h-full rounded-full transition-all duration-500 ${
+                        stars >= 4 ? 'bg-[#c86228]' : stars === 3 ? 'bg-amber-500' : 'bg-rose-400'
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
                       }`}
                       style={{ width: `${pct}%` }}
                     />
                   </div>
 
+<<<<<<< HEAD
                   <span className="w-14 text-right text-[#7c4d2e] font-mono text-[11px]">
+=======
+                  <span className="w-14 text-right text-[#9c7f6e] font-mono text-[11px]">
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
                     {pct}% ({count})
                   </span>
                 </button>
@@ -154,6 +200,7 @@ export const ReviewSection: React.FC<ReviewSectionProps> = ({ stallId, stallName
       {/* Sorting & Filter Controls */}
       <div className="flex flex-wrap items-center justify-between gap-4 pt-2">
         <div className="flex items-center gap-2">
+<<<<<<< HEAD
           <SlidersHorizontal size={14} className="text-[#7c4d2e]" />
           <span className="text-xs font-bold text-[#3c1e0a]">Sort Reviews:</span>
           <div className="inline-flex rounded-xl border border-[#f0bd9b] p-1 bg-[#fff0e2] text-xs">
@@ -161,6 +208,15 @@ export const ReviewSection: React.FC<ReviewSectionProps> = ({ stallId, stallName
               onClick={() => setSort('recent')}
               className={`px-3 py-1 rounded-lg font-semibold transition-colors cursor-pointer ${
                 sort === 'recent' ? 'bg-[#fff8f2] shadow-xs text-[#b85018] font-bold' : 'text-[#7c4d2e] hover:text-[#3c1e0a]'
+=======
+          <SlidersHorizontal size={14} className="text-[#9c7f6e]" />
+          <span className="text-xs font-bold text-[#2e1b10]">Sort Reviews:</span>
+          <div className="inline-flex rounded-xl border border-[#eed7c2] p-1 bg-[#fdf8f3] text-xs">
+            <button
+              onClick={() => setSort('recent')}
+              className={`px-3 py-1 rounded-lg font-semibold transition-colors cursor-pointer ${
+                sort === 'recent' ? 'bg-[#fffdfb] shadow-xs text-[#c86228] font-bold' : 'text-[#735442] hover:text-[#2e1b10]'
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
               }`}
             >
               Most Recent
@@ -168,7 +224,11 @@ export const ReviewSection: React.FC<ReviewSectionProps> = ({ stallId, stallName
             <button
               onClick={() => setSort('highest')}
               className={`px-3 py-1 rounded-lg font-semibold transition-colors cursor-pointer ${
+<<<<<<< HEAD
                 sort === 'highest' ? 'bg-[#fff8f2] shadow-xs text-[#b85018] font-bold' : 'text-[#7c4d2e] hover:text-[#3c1e0a]'
+=======
+                sort === 'highest' ? 'bg-[#fffdfb] shadow-xs text-[#c86228] font-bold' : 'text-[#735442] hover:text-[#2e1b10]'
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
               }`}
             >
               Highest Rated
@@ -176,7 +236,11 @@ export const ReviewSection: React.FC<ReviewSectionProps> = ({ stallId, stallName
             <button
               onClick={() => setSort('lowest')}
               className={`px-3 py-1 rounded-lg font-semibold transition-colors cursor-pointer ${
+<<<<<<< HEAD
                 sort === 'lowest' ? 'bg-[#fff8f2] shadow-xs text-[#b85018] font-bold' : 'text-[#7c4d2e] hover:text-[#3c1e0a]'
+=======
+                sort === 'lowest' ? 'bg-[#fffdfb] shadow-xs text-[#c86228] font-bold' : 'text-[#735442] hover:text-[#2e1b10]'
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
               }`}
             >
               Lowest Rated
@@ -187,7 +251,11 @@ export const ReviewSection: React.FC<ReviewSectionProps> = ({ stallId, stallName
         {ratingFilter && (
           <button
             onClick={() => setRatingFilter(undefined)}
+<<<<<<< HEAD
             className="text-xs text-[#b85018] font-bold hover:underline cursor-pointer"
+=======
+            className="text-xs text-[#c86228] font-bold hover:underline cursor-pointer"
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
           >
             Clear {ratingFilter}-Star Filter
           </button>

@@ -84,6 +84,7 @@ export const ExploreStallsPage: React.FC = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
       {/* Header Banner */}
+<<<<<<< HEAD
       <div className="bg-gradient-to-r from-[#b85018] via-[#c0541c] to-[#963e0e] text-[#fff8f2] rounded-3xl p-8 sm:p-10 shadow-xl border border-[#f0bd9b]/40 relative overflow-hidden">
         <div className="max-w-2xl relative z-10">
           <div className="inline-flex items-center gap-1.5 px-3.5 py-1 bg-white/20 border border-white/30 rounded-full text-[#fce3d0] text-xs font-bold uppercase tracking-wider mb-3 backdrop-blur-sm">
@@ -93,6 +94,17 @@ export const ExploreStallsPage: React.FC = () => {
             Explore All 50+ Khau Katta Stalls
           </h1>
           <p className="text-sm text-[#ffe8d6]/90 leading-relaxed">
+=======
+      <div className="bg-gradient-to-r from-[#a84e12] via-[#c25e1a] to-[#8a3809] text-white rounded-3xl p-8 sm:p-10 shadow-xl border border-[#e8c4a2]/40 relative overflow-hidden">
+        <div className="max-w-2xl relative z-10">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-white/20 border border-white/30 rounded-full text-amber-100 text-xs font-bold uppercase tracking-wider mb-3 backdrop-blur-sm">
+            <Store size={13} /> Belagavi Marketplace Directory
+          </div>
+          <h1 className="text-3xl sm:text-4xl font-black tracking-tight mb-3">
+            Explore All 50+ Khau Katta Stalls
+          </h1>
+          <p className="text-sm text-amber-50/90 leading-relaxed">
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
             Browse through Belagavi&apos;s renowned street foods, sweets, silverware, handlooms, brassware, and artisan workshops. Filter by your favorite category or search specific local stalls.
           </p>
         </div>
@@ -105,10 +117,17 @@ export const ExploreStallsPage: React.FC = () => {
       {/* Category Filter Pills (All 9 Categories) */}
       <div className="space-y-3">
         <div className="flex items-center justify-between">
+<<<<<<< HEAD
           <span className="text-xs font-bold uppercase tracking-wider text-[#7c4d2e] flex items-center gap-1">
             <Filter size={13} /> Select Marketplace Category
           </span>
           <span className="text-xs text-[#7c4d2e] font-medium">
+=======
+          <span className="text-xs font-bold uppercase tracking-wider text-[#735442] flex items-center gap-1">
+            <Filter size={13} /> Select Marketplace Category
+          </span>
+          <span className="text-xs text-[#735442] font-medium">
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
             Showing {filteredStalls.length} of {stalls.length} stalls
           </span>
         </div>
@@ -116,10 +135,17 @@ export const ExploreStallsPage: React.FC = () => {
         <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
           <button
             onClick={() => handleCategorySelect('all')}
+<<<<<<< HEAD
             className={`px-4 py-2 rounded-full text-xs font-bold transition-all flex items-center gap-1.5 whitespace-nowrap cursor-pointer ${
               selectedCategorySlug === 'all'
                 ? 'bg-[#b85018] text-white shadow-md'
                 : 'bg-[#fff8f2] text-[#3c1e0a] hover:bg-[#fff0e2] border border-[#f0bd9b]'
+=======
+            className={`px-4 py-2 rounded-2xl text-xs font-bold transition-all flex items-center gap-1.5 whitespace-nowrap cursor-pointer ${
+              selectedCategorySlug === 'all'
+                ? 'bg-[#c25e1a] text-white shadow-md'
+                : 'bg-white text-[#4a2e1d] hover:bg-[#fdf0e2] border border-[#e8c4a2]'
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
             }`}
           >
             <span>All Stalls (50+ Capacity)</span>
@@ -131,16 +157,27 @@ export const ExploreStallsPage: React.FC = () => {
               <button
                 key={cat.id}
                 onClick={() => handleCategorySelect(cat.slug)}
+<<<<<<< HEAD
                 className={`px-4 py-2 rounded-full text-xs font-bold transition-all flex items-center gap-2 whitespace-nowrap cursor-pointer ${
                   isSelected
                     ? 'bg-[#b85018] text-white shadow-md'
                     : 'bg-[#fff8f2] text-[#3c1e0a] hover:bg-[#fff0e2] border border-[#f0bd9b]'
+=======
+                className={`px-3.5 py-2 rounded-2xl text-xs font-bold transition-all flex items-center gap-2 whitespace-nowrap cursor-pointer ${
+                  isSelected
+                    ? 'bg-[#c25e1a] text-white shadow-md'
+                    : 'bg-white text-[#4a2e1d] hover:bg-[#fdf0e2] border border-[#e8c4a2]'
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
                 }`}
               >
                 <CategoryIcon
                   name={cat.icon}
                   size={15}
+<<<<<<< HEAD
                   className={isSelected ? 'text-white' : 'text-[#b85018]'}
+=======
+                  className={isSelected ? 'text-white' : 'text-[#c25e1a]'}
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
                 />
                 <span>{cat.name}</span>
               </button>
@@ -150,33 +187,53 @@ export const ExploreStallsPage: React.FC = () => {
       </div>
 
       {/* Search & Filter Bar */}
+<<<<<<< HEAD
       <div className="bg-[#fff8f2]/95 backdrop-blur-sm p-4 rounded-3xl border border-[#f0bd9b] shadow-xs flex flex-wrap items-center justify-between gap-4">
         {/* Search input */}
         <div className="relative flex-1 min-w-[260px]">
           <Search size={16} className="absolute left-3.5 top-3 text-[#7c4d2e]" />
+=======
+      <div className="bg-white/95 backdrop-blur-sm p-4 rounded-3xl border border-[#e8c4a2] shadow-xs flex flex-wrap items-center justify-between gap-4">
+        {/* Search input */}
+        <div className="relative flex-1 min-w-[260px]">
+          <Search size={16} className="absolute left-3.5 top-3 text-[#9c7f6e]" />
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
           <input
             type="text"
             value={searchQuery}
             onChange={e => setSearchQuery(e.target.value)}
             placeholder="Search stall name, menu item, or stall number (e.g. KK-01)..."
+<<<<<<< HEAD
             className="w-full pl-10 pr-4 py-2 bg-[#fff0e2] rounded-full text-xs sm:text-sm text-[#3c1e0a] border border-[#f0bd9b] focus:border-[#b85018] focus:bg-white focus:outline-none placeholder:text-[#7c4d2e]/70"
+=======
+            className="w-full pl-10 pr-4 py-2 bg-[#fdf3e7] rounded-2xl text-xs sm:text-sm text-[#2a1408] border border-[#e8c4a2] focus:border-[#c25e1a] focus:bg-white focus:outline-none placeholder:text-[#9c7f6e]"
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
           />
         </div>
 
         {/* Filter Controls */}
         <div className="flex items-center flex-wrap gap-3">
           {/* Open Now Checkbox Toggle */}
+<<<<<<< HEAD
           <label className="flex items-center gap-2 text-xs font-bold text-[#3c1e0a] cursor-pointer select-none bg-[#fff0e2] px-4 py-2 rounded-full border border-[#f0bd9b] hover:bg-[#fce5d2]">
+=======
+          <label className="flex items-center gap-2 text-xs font-bold text-[#4a2e1d] cursor-pointer select-none bg-[#fdf3e7] px-3.5 py-2 rounded-2xl border border-[#e8c4a2] hover:bg-[#faebd7]">
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
             <input
               type="checkbox"
               checked={onlyOpen}
               onChange={e => setOnlyOpen(e.target.checked)}
+<<<<<<< HEAD
               className="rounded text-[#b85018] focus:ring-[#b85018] h-4 w-4"
+=======
+              className="rounded text-[#c25e1a] focus:ring-[#c25e1a] h-4 w-4"
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
             />
             <span>Open Stalls Only</span>
           </label>
 
           {/* Sort By Dropdown */}
+<<<<<<< HEAD
           <div className="flex items-center gap-1.5 bg-[#fff0e2] px-4 py-2 rounded-full border border-[#f0bd9b] text-xs">
             <SlidersHorizontal size={13} className="text-[#7c4d2e]" />
             <span className="text-[#7c4d2e] font-medium">Sort:</span>
@@ -184,6 +241,15 @@ export const ExploreStallsPage: React.FC = () => {
               value={sortBy}
               onChange={e => setSortBy(e.target.value as any)}
               className="bg-transparent font-bold text-[#3c1e0a] focus:outline-none cursor-pointer"
+=======
+          <div className="flex items-center gap-1.5 bg-[#fdf3e7] px-3.5 py-2 rounded-2xl border border-[#e8c4a2] text-xs">
+            <SlidersHorizontal size={13} className="text-[#9c7f6e]" />
+            <span className="text-[#9c7f6e] font-medium">Sort:</span>
+            <select
+              value={sortBy}
+              onChange={e => setSortBy(e.target.value as any)}
+              className="bg-transparent font-bold text-[#2a1408] focus:outline-none cursor-pointer"
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
             >
               <option value="rating">Top Rated</option>
               <option value="reviews">Most Reviewed</option>
@@ -195,7 +261,11 @@ export const ExploreStallsPage: React.FC = () => {
           {(searchQuery || onlyOpen || selectedCategorySlug !== 'all') && (
             <button
               onClick={resetFilters}
+<<<<<<< HEAD
               className="flex items-center gap-1 px-3 py-2 text-xs text-[#7c4d2e] hover:text-[#b85018] font-medium cursor-pointer"
+=======
+              className="flex items-center gap-1 px-3 py-2 text-xs text-stone-500 hover:text-orange-700 font-medium cursor-pointer"
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
               title="Reset all filters"
             >
               <RotateCcw size={13} />
@@ -209,7 +279,11 @@ export const ExploreStallsPage: React.FC = () => {
       {loading ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {[1, 2, 3, 4, 5, 6].map(n => (
+<<<<<<< HEAD
             <div key={n} className="h-80 rounded-3xl bg-[#fff0e2] animate-pulse border border-[#f0bd9b]" />
+=======
+            <div key={n} className="h-80 rounded-2xl bg-stone-100 animate-pulse" />
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
           ))}
         </div>
       ) : filteredStalls.length > 0 ? (
@@ -219,19 +293,34 @@ export const ExploreStallsPage: React.FC = () => {
           ))}
         </div>
       ) : (
+<<<<<<< HEAD
         <div className="bg-[#fff8f2] rounded-3xl p-12 text-center border border-[#f0bd9b] max-w-md mx-auto space-y-4 shadow-sm">
           <div className="w-16 h-16 rounded-2xl bg-[#fff0e2] text-[#b85018] mx-auto flex items-center justify-center border border-[#f0bd9b]">
             <Store size={32} />
           </div>
           <h3 className="font-serif text-lg font-bold text-[#3c1e0a]">No stalls matched your filters</h3>
           <p className="text-xs text-[#7c4d2e]">
+=======
+        <div className="bg-white rounded-3xl p-12 text-center border border-stone-200 max-w-md mx-auto space-y-4 shadow-sm">
+          <div className="w-16 h-16 rounded-2xl bg-orange-50 text-orange-600 mx-auto flex items-center justify-center">
+            <Store size={32} />
+          </div>
+          <h3 className="text-lg font-bold text-stone-900">No stalls matched your filters</h3>
+          <p className="text-xs text-stone-500">
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
             Try adjusting your search terms, choosing a different category, or resetting the filters.
           </p>
           <button
             onClick={resetFilters}
+<<<<<<< HEAD
             className="px-5 py-2.5 bg-[#b85018] text-white rounded-full text-xs font-bold hover:bg-[#963e0e] transition-colors cursor-pointer shadow-xs"
           >
             Show All Stalls
+=======
+            className="px-4 py-2 bg-orange-600 text-white rounded-xl text-xs font-bold hover:bg-orange-700 transition-colors cursor-pointer"
+          >
+            Show All 10 Sample Stalls
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
           </button>
         </div>
       )}

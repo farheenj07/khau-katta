@@ -19,6 +19,7 @@ export const EmptyState: React.FC<EmptyStateProps> = ({
   onActionClick
 }) => {
   return (
+<<<<<<< HEAD
     <div className="bg-[#fff8f2]/95 rounded-3xl p-10 border border-[#f0bd9b] text-center max-w-md mx-auto space-y-4 shadow-xs backdrop-blur-sm font-sans">
       <div className="w-16 h-16 rounded-2xl bg-[#fff0e2] text-[#b85018] mx-auto flex items-center justify-center border border-[#f0bd9b]">
         {icon}
@@ -26,6 +27,15 @@ export const EmptyState: React.FC<EmptyStateProps> = ({
       <div>
         <h3 className="font-serif text-base font-bold text-[#3c1e0a]">{title}</h3>
         <p className="text-xs text-[#7c4d2e] mt-1 leading-relaxed max-w-xs mx-auto">
+=======
+    <div className="bg-[#fffdfb]/95 rounded-3xl p-10 border border-[#eed7c2] text-center max-w-md mx-auto space-y-4 shadow-xs backdrop-blur-sm">
+      <div className="w-16 h-16 rounded-2xl bg-[#faebd7] text-[#c86228] mx-auto flex items-center justify-center">
+        {icon}
+      </div>
+      <div>
+        <h3 className="text-base font-bold text-[#2e1b10]">{title}</h3>
+        <p className="text-xs text-[#735442] mt-1 leading-relaxed max-w-xs mx-auto">
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
           {description}
         </p>
       </div>
@@ -33,7 +43,11 @@ export const EmptyState: React.FC<EmptyStateProps> = ({
       {(actionText && actionPath) && (
         <Link
           to={actionPath}
+<<<<<<< HEAD
           className="inline-block px-5 py-2.5 bg-gradient-to-r from-[#b85018] to-[#d97706] hover:from-[#963e0e] hover:to-[#b45309] text-white font-bold text-xs rounded-xl shadow-md transition-all"
+=======
+          className="inline-block px-5 py-2.5 bg-gradient-to-r from-[#c86228] to-[#d97706] hover:from-[#b0521e] hover:to-[#b45309] text-white font-bold text-xs rounded-xl shadow-md transition-all"
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
         >
           {actionText}
         </Link>
@@ -42,7 +56,11 @@ export const EmptyState: React.FC<EmptyStateProps> = ({
       {(actionText && onActionClick && !actionPath) && (
         <button
           onClick={onActionClick}
+<<<<<<< HEAD
           className="inline-block px-5 py-2.5 bg-gradient-to-r from-[#b85018] to-[#d97706] hover:from-[#963e0e] hover:to-[#b45309] text-white font-bold text-xs rounded-xl shadow-md transition-all cursor-pointer"
+=======
+          className="inline-block px-5 py-2.5 bg-gradient-to-r from-[#c86228] to-[#d97706] hover:from-[#b0521e] hover:to-[#b45309] text-white font-bold text-xs rounded-xl shadow-md transition-all cursor-pointer"
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
         >
           {actionText}
         </button>

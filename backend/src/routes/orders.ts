@@ -1,4 +1,5 @@
 import { Router, Response } from 'express';
+<<<<<<< HEAD
 import {
   orders,
   orderItems,
@@ -95,10 +96,22 @@ router.post('/checkout', authenticate, requireAuth, (req: AuthRequest, res: Resp
 // ---------------------------------------------------------------------------
 // 1. GET /api/orders/my-orders - Customer's orders with tracking details
 // ---------------------------------------------------------------------------
+=======
+import { orders, orderItems, stalls, products } from '../data/db';
+import { authenticate, requireAuth, AuthRequest } from '../middleware/auth';
+
+const router = Router();
+
+// GET /api/orders/my-orders - Authenticated customer's orders
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
 router.get('/my-orders', authenticate, requireAuth, (req: AuthRequest, res: Response) => {
   const userId = req.user!.id;
   const userOrders = orders.filter(o => o.userId === userId);
 
+<<<<<<< HEAD
+=======
+  // Attach stall details and line items to each order
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
   const enrichedOrders = userOrders.map(order => {
     const stall = stalls.find(s => s.id === order.stallId);
     const items = orderItems.filter(item => item.orderId === order.id).map(item => {
@@ -110,15 +123,22 @@ router.get('/my-orders', authenticate, requireAuth, (req: AuthRequest, res: Resp
       };
     });
 
+<<<<<<< HEAD
     const audit = getPickupAuditDetailsForOrder(order.id);
 
+=======
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
     return {
       ...order,
       stallName: stall?.name,
       stallNumber: stall?.stallNumber,
       stallImage: stall?.imageUrl,
+<<<<<<< HEAD
       items,
       pickupAudit: audit
+=======
+      items
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
     };
   });
 
@@ -131,6 +151,7 @@ router.get('/my-orders', authenticate, requireAuth, (req: AuthRequest, res: Resp
   });
 });
 
+<<<<<<< HEAD
 // ---------------------------------------------------------------------------
 // 2. GET /api/orders/vendor/my-orders - Vendor stall orders with OTP info
 // ---------------------------------------------------------------------------
@@ -366,6 +387,9 @@ router.patch('/:id/status', authenticate, requireAuth, (req: AuthRequest, res: R
 // ---------------------------------------------------------------------------
 // 8. GET /api/orders/:id - Single order details with pickup audit info
 // ---------------------------------------------------------------------------
+=======
+// GET /api/orders/:id - Single order details
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
 router.get('/:id', authenticate, requireAuth, (req: AuthRequest, res: Response) => {
   const { id } = req.params;
   const order = orders.find(o => o.id === id);
@@ -374,9 +398,19 @@ router.get('/:id', authenticate, requireAuth, (req: AuthRequest, res: Response) 
     return res.status(404).json({ success: false, message: 'Order not found.' });
   }
 
+<<<<<<< HEAD
   const stall = stalls.find(s => s.id === order.stallId);
   const items = orderItems.filter(i => i.orderId === order.id);
   const audit = getPickupAuditDetailsForOrder(order.id);
+=======
+  // Access check: User must own the order or be Admin/Delivery partner
+  if (order.userId !== req.user!.id && req.user!.roleName === 'customer') {
+    return res.status(403).json({ success: false, message: 'Unauthorized to view this order.' });
+  }
+
+  const stall = stalls.find(s => s.id === order.stallId);
+  const items = orderItems.filter(i => i.orderId === order.id);
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
 
   res.json({
     success: true,
@@ -384,8 +418,12 @@ router.get('/:id', authenticate, requireAuth, (req: AuthRequest, res: Response) 
       ...order,
       stallName: stall?.name,
       stallNumber: stall?.stallNumber,
+<<<<<<< HEAD
       items,
       pickupAudit: audit
+=======
+      items
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
     }
   });
 });

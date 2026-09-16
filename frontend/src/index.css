@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 :root {
+<<<<<<< HEAD
   --brand-primary: #b85018; /* Warm Burnt Terracotta from Pinterest reference */
   --brand-primary-hover: #963e0e;
   --brand-secondary: #d97706; /* Saffron Warm Amber */
@@ -31,6 +32,29 @@ html, body {
   background-repeat: no-repeat !important;
   color: #3c1e0a;
   font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+=======
+    --brand-primary: #c25e1a; /* Rich Caramel Terracotta */
+    --brand-primary-hover: #a84e12;
+    --brand-secondary: #d97706; /* Saffron Honey Amber */
+    --brand-accent: #e89558; /* Baked Apricot Accent */
+    --brand-dark: #2a1408; /* Deep Roasted Espresso */
+    --brand-cream: #f6ceaa; /* Warm Baked Peach from Pinterest */
+    --brand-surface: #ffffff; /* Crisp Clean White Surface */
+    --brand-border: #e8c4a2; /* Warm Peach Border */
+  }
+
+html, body {
+  background-color: #f7ceaa !important;
+  background-image: 
+    radial-gradient(ellipse at 15% 10%, rgba(255, 248, 240, 0.65) 0%, transparent 40%),
+    radial-gradient(ellipse at 85% 20%, rgba(226, 126, 55, 0.22) 0%, transparent 45%),
+    radial-gradient(ellipse at 50% 85%, rgba(240, 165, 105, 0.25) 0%, transparent 55%),
+    linear-gradient(180deg, #fbe3cc 0%, #f7ceaa 40%, #f2be94 100%) !important;
+  background-attachment: fixed !important;
+  background-repeat: no-repeat !important;
+  color: #2a1408;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
   scrollbar-gutter: stable;
   overscroll-behavior-y: none;
   -webkit-font-smoothing: antialiased;
@@ -38,17 +62,27 @@ html, body {
 }
 
 .theme-artisan-bg {
+<<<<<<< HEAD
   background-color: #f8cfa8 !important;
   background-image: 
     radial-gradient(ellipse at 15% 10%, rgba(255, 248, 240, 0.75) 0%, transparent 45%),
     radial-gradient(ellipse at 85% 20%, rgba(217, 100, 30, 0.18) 0%, transparent 50%),
     radial-gradient(ellipse at 50% 85%, rgba(245, 175, 120, 0.22) 0%, transparent 60%),
     linear-gradient(180deg, #fce3d0 0%, #f7c5a3 40%, #f4b88d 100%) !important;
+=======
+  background-color: #f7ceaa !important;
+  background-image: 
+    radial-gradient(ellipse at 15% 10%, rgba(255, 248, 240, 0.65) 0%, transparent 40%),
+    radial-gradient(ellipse at 85% 20%, rgba(226, 126, 55, 0.22) 0%, transparent 45%),
+    radial-gradient(ellipse at 50% 85%, rgba(240, 165, 105, 0.25) 0%, transparent 55%),
+    linear-gradient(180deg, #fbe3cc 0%, #f7ceaa 40%, #f2be94 100%) !important;
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
   background-attachment: fixed !important;
   background-repeat: no-repeat !important;
   min-height: 100vh;
 }
 
+<<<<<<< HEAD
 /* Custom Modern Badges & Buttons matching reference */
 .badge-terracotta {
   background: linear-gradient(135deg, #b85018 0%, #a03c0c 100%);
@@ -129,5 +163,40 @@ html, body {
   border-color: #b85018;
   outline: none;
   box-shadow: 0 0 0 3px rgba(184, 80, 24, 0.2);
+=======
+/* Custom modern animations and badge effects */
+.badge-spice {
+  background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%);
+  color: white;
+}
+
+.badge-saffron {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: white;
+}
+
+.badge-emerald {
+  background: linear-gradient(135deg, #10b981 0%, #047857 100%);
+  color: white;
+}
+
+.hero-gradient {
+  background: radial-gradient(circle at 10% 20%, rgba(217, 119, 6, 0.08) 0%, rgba(194, 65, 12, 0.04) 50%, rgba(250, 247, 242, 0) 100%);
+}
+
+.card-artisan {
+  background-color: rgba(255, 253, 251, 0.94);
+  border: 1px solid rgba(238, 215, 194, 0.85);
+  box-shadow: 0 4px 20px -2px rgba(200, 98, 40, 0.06);
+}
+
+.card-hover {
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 32px -6px rgba(200, 98, 40, 0.14), 0 6px 12px -4px rgba(46, 27, 16, 0.05);
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
 }
 

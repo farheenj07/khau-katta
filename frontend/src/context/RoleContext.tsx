@@ -9,7 +9,10 @@ interface RoleContextType {
   isCustomer: boolean;
   isAdmin: boolean;
   isDeliveryPartner: boolean;
+<<<<<<< HEAD
   isVendor: boolean;
+=======
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
 }
 
 const RoleContext = createContext<RoleContextType | undefined>(undefined);
@@ -17,7 +20,11 @@ const RoleContext = createContext<RoleContextType | undefined>(undefined);
 export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [currentRole, setCurrentRole] = useState<UserRole>(() => {
     const saved = localStorage.getItem('khau_katta_role') as UserRole;
+<<<<<<< HEAD
     return saved && ['customer', 'admin', 'delivery_partner', 'vendor'].includes(saved) ? saved : 'customer';
+=======
+    return saved && ['customer', 'admin', 'delivery_partner'].includes(saved) ? saved : 'customer';
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
   });
 
   useEffect(() => {
@@ -27,8 +34,12 @@ export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const roleMeta: Record<UserRole, { title: string; defaultUser: string }> = {
     customer: { title: 'Customer / Food Lover', defaultUser: 'Pooja Kulkarni (Belagavi)' },
     admin: { title: 'Super Admin', defaultUser: 'Basavaraj Patil (Marketplace Ops)' },
+<<<<<<< HEAD
     delivery_partner: { title: 'Belagavi Delivery Rider', defaultUser: 'Ramesh Naik (KA-22 Scooter)' },
     vendor: { title: 'Food Vendor / Stall Owner', defaultUser: 'Belgaum Sweets Merchant (KK-01)' }
+=======
+    delivery_partner: { title: 'Belagavi Delivery Rider', defaultUser: 'Ramesh Naik (KA-22 Scooter)' }
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
   };
 
   const value: RoleContextType = {
@@ -38,8 +49,12 @@ export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({ children
     roleTitle: roleMeta[currentRole].title,
     isCustomer: currentRole === 'customer',
     isAdmin: currentRole === 'admin',
+<<<<<<< HEAD
     isDeliveryPartner: currentRole === 'delivery_partner',
     isVendor: currentRole === 'vendor'
+=======
+    isDeliveryPartner: currentRole === 'delivery_partner'
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
   };
 
   return <RoleContext.Provider value={value}>{children}</RoleContext.Provider>;

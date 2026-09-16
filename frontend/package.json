@@ -11,8 +11,11 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.3",
+<<<<<<< HEAD
     "@types/leaflet": "^1.9.22",
     "leaflet": "^1.9.4",
+=======
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
     "lucide-react": "^1.44.0",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",

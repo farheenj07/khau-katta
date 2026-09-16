@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 export type UserRole = 'customer' | 'admin' | 'delivery_partner' | 'vendor';
+=======
+export type UserRole = 'customer' | 'admin' | 'delivery_partner';
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
 
 export interface User {
   id: string;
@@ -133,11 +137,16 @@ export interface Order {
   deliveryFee: number;
   taxAmount: number;
   totalAmount: number;
+<<<<<<< HEAD
   status: 'placed' | 'confirmed' | 'preparing' | 'ready_for_pickup' | 'picked_up' | 'out_for_delivery' | 'delivered' | 'cancelled';
+=======
+  status: 'placed' | 'confirmed' | 'preparing' | 'ready_for_pickup' | 'out_for_delivery' | 'delivered' | 'cancelled';
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
   specialInstructions?: string;
   createdAt: string;
   updatedAt: string;
   items?: OrderItem[];
+<<<<<<< HEAD
   customerName?: string;
   customerPhone?: string;
   customerAddress?: string;
@@ -243,6 +252,8 @@ export interface LocationLog {
   speed: number;
   heading: number;
   timestamp: string;
+=======
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
 }
 
 export type ReviewStatus = 'ACTIVE' | 'HIDDEN' | 'REPORTED' | 'REMOVED';

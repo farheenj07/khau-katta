@@ -144,18 +144,30 @@ export const ProfilePage: React.FC = () => {
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8 pb-24 md:pb-12">
       {/* Header Profile Hero Card */}
+<<<<<<< HEAD
       <div className="bg-gradient-to-r from-[#3c1e0a] via-[#291305] to-[#4c240c] text-[#fff8f2] rounded-3xl p-6 sm:p-8 shadow-2xl border border-[#f0bd9b]/30 relative overflow-hidden">
+=======
+      <div className="bg-gradient-to-r from-[#3d2012] via-[#24130b] to-[#4a2717] text-white rounded-3xl p-6 sm:p-8 shadow-2xl border border-[#eed7c2]/30 relative overflow-hidden">
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 relative z-10">
           <div className="flex items-center gap-4">
             <div className="relative group">
               <img
                 src={user.avatarUrl || 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150'}
                 alt={user.name}
+<<<<<<< HEAD
                 className="w-18 h-18 sm:w-20 sm:h-20 rounded-2xl object-cover border-2 border-[#f0bd9b]/80 shadow-lg"
               />
               <button
                 onClick={() => setIsChangingAvatar(!isChangingAvatar)}
                 className="absolute -bottom-1.5 -right-1.5 p-1.5 bg-[#b85018] hover:bg-[#963e0e] text-white rounded-full shadow-md text-xs cursor-pointer"
+=======
+                className="w-18 h-18 sm:w-20 sm:h-20 rounded-2xl object-cover border-2 border-amber-400/60 shadow-lg"
+              />
+              <button
+                onClick={() => setIsChangingAvatar(!isChangingAvatar)}
+                className="absolute -bottom-1.5 -right-1.5 p-1.5 bg-[#c86228] hover:bg-[#b2541f] text-white rounded-xl shadow-md text-xs cursor-pointer"
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
                 title="Change photo"
               >
                 <Edit2 size={12} />
@@ -170,21 +182,36 @@ export const ProfilePage: React.FC = () => {
                       type="text"
                       value={nameInput}
                       onChange={e => setNameInput(e.target.value)}
+<<<<<<< HEAD
                       className="px-3 py-1 text-sm bg-[#291305] text-white rounded-xl border border-[#b85018] focus:outline-none"
                     />
                     <button
                       onClick={handleSaveName}
                       className="p-1.5 bg-emerald-600 text-white rounded-xl hover:bg-emerald-700"
+=======
+                      className="px-2 py-1 text-sm bg-stone-800 text-white rounded-lg border border-orange-500 focus:outline-none"
+                    />
+                    <button
+                      onClick={handleSaveName}
+                      className="p-1 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700"
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
                     >
                       <Check size={14} />
                     </button>
                   </div>
                 ) : (
                   <>
+<<<<<<< HEAD
                     <h1 className="font-serif text-xl sm:text-2xl font-black tracking-tight">{user.name}</h1>
                     <button
                       onClick={() => setIsEditingName(true)}
                       className="text-[#ffe8d6]/80 hover:text-white p-1"
+=======
+                    <h1 className="text-xl sm:text-2xl font-black tracking-tight">{user.name}</h1>
+                    <button
+                      onClick={() => setIsEditingName(true)}
+                      className="text-[#eed7c2]/80 hover:text-white p-1"
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
                       title="Edit Name"
                     >
                       <Edit2 size={13} />
@@ -193,18 +220,32 @@ export const ProfilePage: React.FC = () => {
                 )}
               </div>
 
+<<<<<<< HEAD
               <div className="flex flex-wrap items-center gap-3 text-xs text-[#ffe8d6]/90">
                 <span className="flex items-center gap-1 font-mono">
                   <Phone size={12} className="text-[#e89558]" />
+=======
+              <div className="flex flex-wrap items-center gap-3 text-xs text-[#eed7c2]/90">
+                <span className="flex items-center gap-1 font-mono">
+                  <Phone size={12} className="text-[#f5a866]" />
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
                   +91 {user.phone}
                 </span>
                 {user.email && (
                   <span className="flex items-center gap-1">
+<<<<<<< HEAD
                     <Mail size={12} className="text-[#d97706]" />
                     {user.email}
                   </span>
                 )}
                 <span className="px-3 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-[10px] font-bold uppercase">
+=======
+                    <Mail size={12} className="text-[#fbbf24]" />
+                    {user.email}
+                  </span>
+                )}
+                <span className="px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-[10px] font-bold uppercase">
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
                   Verified Customer
                 </span>
               </div>
@@ -213,7 +254,11 @@ export const ProfilePage: React.FC = () => {
 
           <button
             onClick={() => setShowLogoutConfirm(true)}
+<<<<<<< HEAD
             className="px-4 py-2 bg-[#291305]/90 hover:bg-rose-950 text-[#ffe8d6] hover:text-rose-200 text-xs font-bold rounded-full border border-[#f0bd9b]/30 flex items-center gap-2 cursor-pointer transition-colors"
+=======
+            className="px-4 py-2 bg-[#2f1c10]/90 hover:bg-rose-950 text-[#eed7c2] hover:text-rose-200 text-xs font-bold rounded-2xl border border-[#eed7c2]/30 flex items-center gap-2 cursor-pointer transition-colors"
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
           >
             <LogOut size={14} />
             <span>Logout</span>
@@ -222,8 +267,13 @@ export const ProfilePage: React.FC = () => {
 
         {/* Change Avatar Selector drawer */}
         {isChangingAvatar && (
+<<<<<<< HEAD
           <div className="mt-4 pt-4 border-t border-[#f0bd9b]/20 text-xs space-y-2">
             <p className="font-bold text-[#f0bd9b]">Select an Avatar Preset or enter photo URL:</p>
+=======
+          <div className="mt-4 pt-4 border-t border-[#eed7c2]/20 text-xs space-y-2">
+            <p className="font-bold text-[#f5a866]">Select an Avatar Preset or enter photo URL:</p>
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
             <div className="flex items-center gap-2 flex-wrap">
               {avatarPresets.map((url, i) => (
                 <button
@@ -237,7 +287,11 @@ export const ProfilePage: React.FC = () => {
                       showToast('Avatar updated!', 'success');
                     });
                   }}
+<<<<<<< HEAD
                   className="w-10 h-10 rounded-2xl overflow-hidden border-2 border-[#f0bd9b]/40 hover:border-[#b85018] cursor-pointer"
+=======
+                  className="w-10 h-10 rounded-xl overflow-hidden border-2 border-[#eed7c2]/40 hover:border-[#c86228] cursor-pointer"
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
                 >
                   <img src={url} alt={`Preset ${i}`} className="w-full h-full object-cover" />
                 </button>
@@ -248,7 +302,11 @@ export const ProfilePage: React.FC = () => {
       </div>
 
       {/* Profile Navigation Tabs */}
+<<<<<<< HEAD
       <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none border-b border-[#f0bd9b]">
+=======
+      <div className="flex items-center gap-1.5 overflow-x-auto pb-2 scrollbar-none border-b border-[#eed7c2]">
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
         {[
           { id: 'profile', label: 'My Profile', icon: <User size={15} /> },
           { id: 'orders', label: `My Orders (${orders.length})`, icon: <ShoppingBag size={15} /> },
@@ -262,10 +320,17 @@ export const ProfilePage: React.FC = () => {
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id as any)}
+<<<<<<< HEAD
               className={`px-4 py-2 rounded-full text-xs font-bold transition-all flex items-center gap-2 whitespace-nowrap cursor-pointer ${
                 isActive
                   ? 'bg-[#b85018] text-white shadow-md'
                   : 'bg-[#fff8f2] text-[#3c1e0a] hover:bg-[#fff0e2] border border-[#f0bd9b]'
+=======
+              className={`px-4 py-2.5 rounded-2xl text-xs font-bold transition-all flex items-center gap-2 whitespace-nowrap cursor-pointer ${
+                isActive
+                  ? 'bg-[#c86228] text-white shadow-md'
+                  : 'bg-[#fffdfb] text-[#735442] hover:bg-[#faf2e8] border border-[#eed7c2]'
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
               }`}
             >
               {tab.icon}

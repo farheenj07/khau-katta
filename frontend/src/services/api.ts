@@ -10,9 +10,13 @@ import {
   UserAddress,
   User,
   CartItem,
+<<<<<<< HEAD
   CartSummary,
   Delivery,
   DeliveryRoute
+=======
+  CartSummary
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
 } from '../types';
 
 // Fallbacks are preserved to ensure zero downtime
@@ -600,6 +604,7 @@ export async function uploadStallImage(
   }
 }
 
+<<<<<<< HEAD
 export async function toggleStallOpenStatusApi(
   id: string,
   isOpen: boolean
@@ -902,3 +907,5 @@ export async function optimizeRouteApi(
 
 
 
+=======
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d

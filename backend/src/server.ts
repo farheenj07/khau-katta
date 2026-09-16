@@ -11,7 +11,10 @@ import reviewsRouter from './routes/reviews';
 import ordersRouter from './routes/orders';
 import cartRouter from './routes/cart';
 import uploadRouter from './routes/upload';
+<<<<<<< HEAD
 import deliveriesRouter from './routes/deliveries';
+=======
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -34,7 +37,10 @@ app.use('/api/reviews', reviewsRouter);
 app.use('/api/orders', ordersRouter);
 app.use('/api/cart', cartRouter);
 app.use('/api/upload', uploadRouter);
+<<<<<<< HEAD
 app.use('/api/deliveries', deliveriesRouter);
+=======
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
 
 // Health check
 app.get('/api/health', (req, res) => {

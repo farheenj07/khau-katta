@@ -14,11 +14,17 @@ import { AboutPage } from './pages/AboutPage';
 import { OrdersPage } from './pages/OrdersPage';
 import { CartPage } from './pages/CartPage';
 import { ProfilePage } from './pages/ProfilePage';
+<<<<<<< HEAD
 import { LiveTrackingPage } from './pages/LiveTrackingPage';
 import { AdminLoginPage } from './pages/admin/AdminLoginPage';
 import { AdminDashboard } from './pages/admin/AdminDashboard';
 import { DeliveryDashboard } from './pages/delivery/DeliveryDashboard';
 import { VendorDashboardPage } from './pages/vendor/VendorDashboardPage';
+=======
+import { AdminLoginPage } from './pages/admin/AdminLoginPage';
+import { AdminDashboard } from './pages/admin/AdminDashboard';
+import { DeliveryDashboard } from './pages/delivery/DeliveryDashboard';
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
 
 export const App: React.FC = () => {
   return (
@@ -32,12 +38,16 @@ export const App: React.FC = () => {
               <Route path="/" element={<CustomerLayout />}>
                 <Route index element={<HomePage />} />
                 <Route path="stalls" element={<ExploreStallsPage />} />
+<<<<<<< HEAD
                 <Route path="vendors" element={<ExploreStallsPage />} />
+=======
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
                 <Route path="stalls/:id" element={<StallDetailPage />} />
                 <Route path="about" element={<AboutPage />} />
                 <Route path="orders" element={<OrdersPage />} />
                 <Route path="cart" element={<CartPage />} />
                 <Route path="profile" element={<ProfilePage />} />
+<<<<<<< HEAD
                 <Route path="tracking/:id" element={<LiveTrackingPage />} />
               </Route>
 
@@ -52,6 +62,10 @@ export const App: React.FC = () => {
                 }
               />
 
+=======
+              </Route>
+
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
               {/* Admin Login Route (Publicly accessible to authenticate) */}
               <Route path="/admin/login" element={<AdminLoginPage />} />
 

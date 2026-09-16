@@ -30,7 +30,11 @@ import {
   Filter
 } from 'lucide-react';
 import { AdminStats, Review, Stall } from '../../types';
+<<<<<<< HEAD
 import { getAdminStats, getAdminReviews, moderateReview, getStalls, getAdminLiveFleetApi } from '../../services/api';
+=======
+import { getAdminStats, getAdminReviews, moderateReview, getStalls } from '../../services/api';
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
 import { useAuth } from '../../context/AuthContext';
 import { useToast } from '../../context/ToastContext';
 import { ConfirmDialog } from '../../components/common/ConfirmDialog';
@@ -67,14 +71,18 @@ export const AdminDashboard: React.FC = () => {
   const [modTargetReview, setModTargetReview] = useState<Review | null>(null);
   const [modAction, setModAction] = useState<'HIDDEN' | 'REMOVED' | 'ACTIVE' | null>(null);
 
+<<<<<<< HEAD
   // Live Fleet monitoring state
   const [fleetData, setFleetData] = useState<any[]>([]);
   const [fleetStats, setFleetStats] = useState({ totalRiders: 18, activeCount: 1 });
 
+=======
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
   const { user, token, logout, isAdmin } = useAuth();
   const { showToast } = useToast();
   const navigate = useNavigate();
 
+<<<<<<< HEAD
   const loadFleet = useCallback(async () => {
     try {
       const res = await getAdminLiveFleetApi(token || undefined);
@@ -90,6 +98,8 @@ export const AdminDashboard: React.FC = () => {
     }
   }, [token]);
 
+=======
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
   const loadData = useCallback(async () => {
     setLoading(true);
     try {
@@ -129,10 +139,15 @@ export const AdminDashboard: React.FC = () => {
   useEffect(() => {
     if (activeTab === 'reviews') {
       loadReviews();
+<<<<<<< HEAD
     } else if (activeTab === 'delivery') {
       loadFleet();
     }
   }, [activeTab, loadReviews, loadFleet]);
+=======
+    }
+  }, [activeTab, loadReviews]);
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
 
   const handleExecuteModeration = async () => {
     if (!modTargetReview || !modAction) return;
@@ -175,6 +190,7 @@ export const AdminDashboard: React.FC = () => {
   ];
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen theme-artisan-bg text-[#3c1e0a] flex flex-col font-sans">
       {/* Top Admin Header */}
       <header className="bg-[#291305] text-[#fff8f2] px-6 py-4 border-b border-[#3d2314] shadow-md flex items-center justify-between">
@@ -186,6 +202,19 @@ export const AdminDashboard: React.FC = () => {
             <h1 className="text-base font-bold tracking-tight text-white flex items-center gap-2 font-serif">
               Khau Katta Belagavi
               <span className="text-xs px-2.5 py-0.5 bg-[#b85018]/25 text-[#fff0e2] rounded-full font-semibold border border-[#b85018]/40">
+=======
+    <div className="min-h-screen theme-artisan-bg text-[#2e1b10] flex flex-col">
+      {/* Top Admin Header */}
+      <header className="bg-[#24150b] text-[#f8efe4] px-6 py-4 border-b border-[#3d2314] shadow-md flex items-center justify-between">
+        <div className="flex items-center gap-3">
+          <div className="w-9 h-9 rounded-2xl bg-[#c86228] flex items-center justify-center text-white font-black text-sm shadow-md">
+            KK
+          </div>
+          <div>
+            <h1 className="text-base font-bold tracking-tight text-white flex items-center gap-2">
+              Khau Katta Belagavi
+              <span className="text-xs px-2.5 py-0.5 bg-[#e28743]/20 text-[#f6d2b5] rounded-full font-semibold border border-[#e28743]/40">
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
                 Admin Central
               </span>
             </h1>
@@ -216,9 +245,15 @@ export const AdminDashboard: React.FC = () => {
       {/* Admin Body Container */}
       <div className="flex-1 flex flex-col md:flex-row">
         {/* Sidebar Navigation */}
+<<<<<<< HEAD
         <aside className="w-full md:w-64 bg-[#fff8f2]/95 backdrop-blur-md border-r border-[#f0bd9b] p-4 flex flex-col justify-between flex-shrink-0">
           <div className="space-y-1">
             <div className="px-3 py-2 text-[10px] font-bold uppercase tracking-wider text-[#7c4d2e]">
+=======
+        <aside className="w-full md:w-64 bg-[#fffdfb]/95 backdrop-blur-md border-r border-[#eed7c2] p-4 flex flex-col justify-between flex-shrink-0">
+          <div className="space-y-1">
+            <div className="px-3 py-2 text-[10px] font-bold uppercase tracking-wider text-[#9c7f6e]">
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
               Operations Menu
             </div>
             {navItems.map(item => {
@@ -229,12 +264,21 @@ export const AdminDashboard: React.FC = () => {
                   onClick={() => setActiveTab(item.id)}
                   className={`w-full flex items-center justify-between px-3 py-2.5 rounded-2xl text-xs font-semibold transition-all cursor-pointer ${
                     isActive
+<<<<<<< HEAD
                       ? 'bg-gradient-to-r from-[#b85018] to-[#d97706] text-white shadow-md'
                       : 'text-[#7c4d2e] hover:bg-[#fff0e2] hover:text-[#3c1e0a]'
                   }`}
                 >
                   <div className="flex items-center gap-2.5">
                     <span className={isActive ? 'text-white' : 'text-[#7c4d2e]'}>
+=======
+                      ? 'bg-gradient-to-r from-[#c86228] to-[#d97706] text-white shadow-md'
+                      : 'text-[#735442] hover:bg-[#faf2e8] hover:text-[#2e1b10]'
+                  }`}
+                >
+                  <div className="flex items-center gap-2.5">
+                    <span className={isActive ? 'text-white' : 'text-[#9c7f6e]'}>
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
                       {item.icon}
                     </span>
                     <span>{item.label}</span>
@@ -243,10 +287,17 @@ export const AdminDashboard: React.FC = () => {
                     <span
                       className={`text-[10px] px-1.5 py-0.5 rounded-md font-bold ${
                         isActive
+<<<<<<< HEAD
                           ? 'bg-[#963e0e] text-orange-100'
                           : item.badge.includes('Reports')
                           ? 'bg-rose-100 text-rose-700 font-black animate-pulse'
                           : 'bg-[#fff0e2] text-[#7c4d2e]'
+=======
+                          ? 'bg-orange-700 text-orange-100'
+                          : item.badge.includes('Reports')
+                          ? 'bg-rose-100 text-rose-700 font-black animate-pulse'
+                          : 'bg-stone-100 text-stone-600'
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
                       }`}
                     >
                       {item.badge}
@@ -744,6 +795,7 @@ export const AdminDashboard: React.FC = () => {
           {/* TAB: ORDERS */}
           {activeTab === 'orders' && (
             <div className="space-y-6">
+<<<<<<< HEAD
               <div className="flex items-center justify-between">
                 <div>
                   <h2 className="text-2xl font-black text-[#2e1b10] tracking-tight">Order Queue &amp; Pickup Verification Audit</h2>
@@ -792,6 +844,30 @@ export const AdminDashboard: React.FC = () => {
                     <CheckCircle2 size={14} className="text-emerald-700" />
                     <span>Pickup Verification Status: <strong>✅ Pickup Verified (OTP Matched)</strong></span>
                   </div>
+=======
+              <div>
+                <h2 className="text-2xl font-black text-[#2e1b10] tracking-tight">Order Queue</h2>
+                <p className="text-xs text-[#735442]">Live order fulfillment across Belagavi</p>
+              </div>
+
+              <div className="bg-[#fffdfb]/95 rounded-3xl p-6 sm:p-8 border border-[#eed7c2] shadow-xs space-y-4 backdrop-blur-sm">
+                <div className="p-5 bg-[#fdf8f3] rounded-2xl border border-[#eed7c2] text-xs text-[#735442] space-y-2">
+                  <div className="flex justify-between font-bold">
+                    <span className="text-[#2e1b10]">Order #KK-2026-00129</span>
+                    <span className="text-emerald-800 bg-[#e8f5ec] px-2 py-0.5 rounded-md border border-emerald-200">DELIVERED</span>
+                  </div>
+                  <div>Customer: Pooja Kulkarni (+91 9845012345) • Stall: Belgaum Kunda House</div>
+                  <div>Total: ₹450 • Verified Review Submitted</div>
+                </div>
+
+                <div className="p-5 bg-[#fdf8f3] rounded-2xl border border-[#eed7c2] text-xs text-[#735442] space-y-2">
+                  <div className="flex justify-between font-bold">
+                    <span className="text-[#2e1b10]">Order #KK-2026-00145</span>
+                    <span className="text-emerald-800 bg-[#e8f5ec] px-2 py-0.5 rounded-md border border-emerald-200">DELIVERED</span>
+                  </div>
+                  <div>Customer: Pooja Kulkarni (+91 9845012345) • Stall: Camp Misal &amp; Chaat Durbar</div>
+                  <div>Total: ₹210 • Eligible for Review</div>
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
                 </div>
               </div>
             </div>
@@ -800,6 +876,7 @@ export const AdminDashboard: React.FC = () => {
           {/* TAB: DELIVERY PARTNERS */}
           {activeTab === 'delivery' && (
             <div className="space-y-6">
+<<<<<<< HEAD
               <div className="flex flex-wrap items-center justify-between gap-4">
                 <div>
                   <h2 className="text-2xl font-black text-[#2e1b10] tracking-tight">Real-Time Delivery Fleet &amp; Live Tracking</h2>
@@ -908,6 +985,16 @@ export const AdminDashboard: React.FC = () => {
                       </div>
                     </div>
                   ))}
+=======
+              <div>
+                <h2 className="text-2xl font-black text-[#2e1b10] tracking-tight">Delivery Fleet Foundation</h2>
+                <p className="text-xs text-[#735442]">18 active riders covering Club Road, Camp, Tilakwadi, and Shahapur</p>
+              </div>
+
+              <div className="bg-[#fffdfb]/95 rounded-3xl p-6 sm:p-8 border border-[#eed7c2] shadow-xs space-y-4 backdrop-blur-sm">
+                <div className="p-5 bg-[#fdf8f3] rounded-2xl text-xs text-[#735442] border border-[#eed7c2]">
+                  <strong className="text-[#2e1b10]">Partner Highlight:</strong> Ramesh Naik (Scooter KA-22-EX-4589) • 142 successful deliveries from Khau Katta stalls.
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
                 </div>
               </div>
             </div>

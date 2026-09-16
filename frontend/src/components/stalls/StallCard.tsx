@@ -19,11 +19,19 @@ export const StallCard: React.FC<StallCardProps> = ({ stall }) => {
   const isInactive = stall.isActive === false || stall.status === 'INACTIVE';
 
   return (
+<<<<<<< HEAD
     <div className={`group bg-[#fff8f2]/95 rounded-3xl overflow-hidden border shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col h-full card-hover ${
       isInactive ? 'border-stone-300 opacity-80' : 'border-[#f0bd9b]'
     }`}>
       {/* Stall Image Placeholder with Status Badge */}
       <div className="relative h-48 w-full bg-[#fce3d0] overflow-hidden">
+=======
+    <div className={`group bg-[#fffdfb]/95 rounded-3xl overflow-hidden border shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col h-full card-hover ${
+      isInactive ? 'border-stone-300 opacity-80' : 'border-[#eed7c2]'
+    }`}>
+      {/* Stall Image Placeholder with Status Badge */}
+      <div className="relative h-48 w-full bg-stone-100 overflow-hidden">
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
         <img
           src={!imageError && stall.imageUrl ? stall.imageUrl : DEFAULT_STALL_IMAGE}
           alt={stall.name}
@@ -38,7 +46,11 @@ export const StallCard: React.FC<StallCardProps> = ({ stall }) => {
         {/* Open / Closed / Inactive Status Pill */}
         <div className="absolute top-3 right-3 z-10">
           <span
+<<<<<<< HEAD
             className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold tracking-wide shadow-sm backdrop-blur-md ${
+=======
+            className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-bold tracking-wide shadow-sm backdrop-blur-md ${
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
               isInactive
                 ? 'bg-rose-900/90 text-rose-200 border border-rose-600/40'
                 : stall.isOpen
@@ -67,15 +79,24 @@ export const StallCard: React.FC<StallCardProps> = ({ stall }) => {
 
         {/* Stall Number Pill */}
         <div className="absolute top-3 left-3 z-10">
+<<<<<<< HEAD
           <span className="inline-flex items-center px-2.5 py-1 rounded-full text-[11px] font-bold bg-black/60 backdrop-blur-md text-[#fce3d0] border border-white/20">
+=======
+          <span className="inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-bold bg-black/60 backdrop-blur-md text-amber-300 border border-white/20">
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
             Stall {stall.stallNumber}
           </span>
         </div>
 
         {/* Category Pill Over Image Bottom */}
         <div className="absolute bottom-3 left-3 z-10">
+<<<<<<< HEAD
           <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold bg-[#fff8f2]/95 text-[#3c1e0a] shadow-sm backdrop-blur-sm border border-[#f0bd9b]/60">
             <CategoryIcon name={stall.category?.icon || 'Store'} size={13} className="text-[#b85018]" />
+=======
+          <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-semibold bg-white/95 text-stone-800 shadow-sm backdrop-blur-sm">
+            <CategoryIcon name={stall.category?.icon || 'Store'} size={13} className="text-orange-600" />
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
             <span>{stall.category?.name || 'Local Stall'}</span>
           </span>
         </div>
@@ -86,6 +107,7 @@ export const StallCard: React.FC<StallCardProps> = ({ stall }) => {
         <div>
           {/* Dynamic Rating and Reviews badge */}
           <div className="flex items-center justify-between gap-2 mb-2">
+<<<<<<< HEAD
             <div className="flex items-center gap-1 px-2.5 py-1 bg-[#fff0e2] border border-[#f0bd9b] text-[#b85018] rounded-full text-xs font-black">
               <Star size={13} className="text-amber-500 fill-amber-500" />
               <span>{ratingValue}</span>
@@ -95,31 +117,60 @@ export const StallCard: React.FC<StallCardProps> = ({ stall }) => {
             </div>
             <div className="flex items-center gap-1 text-[11px] text-[#7c4d2e]">
               <Clock size={12} className="text-[#7c4d2e]" />
+=======
+            <div className="flex items-center gap-1 px-2.5 py-1 bg-[#faf2e8] border border-[#eed7c2] text-[#8c502b] rounded-2xl text-xs font-black">
+              <Star size={13} className="text-amber-500 fill-amber-500" />
+              <span>{ratingValue}</span>
+              <span className="text-[#9c7f6e] font-normal">
+                ({reviewCount} {reviewCount === 1 ? 'review' : 'reviews'})
+              </span>
+            </div>
+            <div className="flex items-center gap-1 text-[11px] text-[#9c7f6e]">
+              <Clock size={12} className="text-[#9c7f6e]" />
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
               <span>{stall.openingTime} - {stall.closingTime}</span>
             </div>
           </div>
 
           {/* Stall Name */}
+<<<<<<< HEAD
           <h3 className="font-serif text-lg font-bold text-[#3c1e0a] group-hover:text-[#b85018] transition-colors line-clamp-1 mb-1.5">
+=======
+          <h3 className="text-base font-bold text-[#2e1b10] group-hover:text-[#c86228] transition-colors line-clamp-1 mb-1.5">
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
             {stall.name}
           </h3>
 
           {/* Short Description */}
+<<<<<<< HEAD
           <p className="text-xs text-[#7c4d2e] line-clamp-2 leading-relaxed mb-4">
+=======
+          <p className="text-xs text-[#735442] line-clamp-2 leading-relaxed mb-4">
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
             {stall.shortDescription}
           </p>
         </div>
 
         {/* Bottom Actions */}
+<<<<<<< HEAD
         <div className="pt-3 border-t border-[#f0bd9b]/40 flex items-center justify-between">
           <div className="flex items-center gap-1.5 text-[11px] text-[#7c4d2e]">
             <Phone size={11} className="text-[#7c4d2e]" />
+=======
+        <div className="pt-3 border-t border-[#eed7c2]/40 flex items-center justify-between">
+          <div className="flex items-center gap-1.5 text-[11px] text-[#9c7f6e]">
+            <Phone size={11} className="text-[#9c7f6e]" />
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
             <span>{stall.contactPhone}</span>
           </div>
 
           <Link
             to={`/stalls/${stall.id}`}
+<<<<<<< HEAD
             className="inline-flex items-center gap-1 px-4 py-1.5 rounded-full bg-[#fff0e2] hover:bg-[#b85018] text-[#b85018] hover:text-white text-xs font-bold transition-all duration-200 border border-[#f0bd9b] shadow-xs"
+=======
+            className="inline-flex items-center gap-1 px-3.5 py-1.5 rounded-xl bg-[#faf2e8] hover:bg-[#c86228] text-[#c86228] hover:text-white text-xs font-bold transition-all duration-200"
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
           >
             <span>View Stall &amp; Menu</span>
             <ChevronRight size={13} />

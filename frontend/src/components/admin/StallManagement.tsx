@@ -296,6 +296,7 @@ export const StallManagement: React.FC = () => {
   });
 
   return (
+<<<<<<< HEAD
     <div className="space-y-6 font-sans">
       {/* Top Header & Add Button */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
@@ -307,13 +308,30 @@ export const StallManagement: React.FC = () => {
             </span>
           </h2>
           <p className="text-xs text-[#7c4d2e]">
+=======
+    <div className="space-y-6">
+      {/* Top Header & Add Button */}
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div>
+          <h2 className="text-2xl font-black text-[#2e1b10] tracking-tight flex items-center gap-2">
+            <span>Stall Management Registry</span>
+            <span className="text-xs bg-[#faebd7] text-[#93370d] font-bold px-3 py-1 rounded-full border border-[#eed7c2]">
+              {stalls.length} Total Stalls
+            </span>
+          </h2>
+          <p className="text-xs text-[#735442]">
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
             Create, edit, toggle active status, and manage storefront photos across Belagavi Khau Katta
           </p>
         </div>
 
         <button
           onClick={handleOpenAdd}
+<<<<<<< HEAD
           className="inline-flex items-center gap-2 px-4 py-2.5 bg-gradient-to-r from-[#b85018] to-[#d97706] hover:from-[#963e0e] hover:to-[#b45309] text-white text-xs font-bold rounded-2xl shadow-md cursor-pointer transition-all flex-shrink-0"
+=======
+          className="inline-flex items-center gap-2 px-4 py-2.5 bg-gradient-to-r from-[#c86228] to-[#d97706] hover:from-[#b0521e] hover:to-[#b45309] text-white text-xs font-bold rounded-2xl shadow-md cursor-pointer transition-all flex-shrink-0"
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
         >
           <Plus size={16} />
           <span>Add New Stall</span>
@@ -321,16 +339,27 @@ export const StallManagement: React.FC = () => {
       </div>
 
       {/* Search & Filter Toolbar */}
+<<<<<<< HEAD
       <div className="p-4 bg-[#fff8f2]/95 rounded-3xl border border-[#f0bd9b] shadow-xs flex flex-wrap items-center gap-3 backdrop-blur-sm">
         {/* Search */}
         <div className="relative flex-1 min-w-[200px]">
           <Search size={15} className="absolute left-3.5 top-2.5 text-[#7c4d2e]" />
+=======
+      <div className="p-4 bg-[#fffdfb]/95 rounded-3xl border border-[#eed7c2] shadow-xs flex flex-wrap items-center gap-3 backdrop-blur-sm">
+        {/* Search */}
+        <div className="relative flex-1 min-w-[200px]">
+          <Search size={15} className="absolute left-3.5 top-2.5 text-[#9c7f6e]" />
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
           <input
             type="text"
             value={searchQuery}
             onChange={e => setSearchQuery(e.target.value)}
             placeholder="Search stall name or KK number..."
+<<<<<<< HEAD
             className="w-full pl-10 pr-4 py-2 bg-[#fff0e2] text-xs text-[#3c1e0a] rounded-xl border border-[#f0bd9b] focus:outline-none focus:border-[#b85018] placeholder:text-[#7c4d2e]/60"
+=======
+            className="w-full pl-10 pr-4 py-2 bg-[#fdf8f3] text-xs text-[#2e1b10] rounded-xl border border-[#eed7c2] focus:outline-none focus:border-[#c86228] placeholder:text-[#9c7f6e]/70"
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
           />
         </div>
 
@@ -339,7 +368,11 @@ export const StallManagement: React.FC = () => {
           <select
             value={selectedCategory}
             onChange={e => setSelectedCategory(e.target.value)}
+<<<<<<< HEAD
             className="w-full p-2 bg-[#fff0e2] text-xs text-[#3c1e0a] rounded-xl border border-[#f0bd9b] focus:outline-none focus:border-[#b85018] font-medium"
+=======
+            className="w-full p-2 bg-[#fdf8f3] text-xs text-[#2e1b10] rounded-xl border border-[#eed7c2] focus:outline-none focus:border-[#c86228] font-medium"
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
           >
             <option value="">All Categories ({categories.length})</option>
             {categories.map(c => (
@@ -355,7 +388,11 @@ export const StallManagement: React.FC = () => {
           <select
             value={selectedStatus}
             onChange={e => setSelectedStatus(e.target.value as any)}
+<<<<<<< HEAD
             className="w-full p-2 bg-[#fff0e2] text-xs text-[#3c1e0a] rounded-xl border border-[#f0bd9b] focus:outline-none focus:border-[#b85018] font-medium"
+=======
+            className="w-full p-2 bg-[#fdf8f3] text-xs text-[#2e1b10] rounded-xl border border-[#eed7c2] focus:outline-none focus:border-[#c86228] font-medium"
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
           >
             <option value="ALL">All Statuses</option>
             <option value="ACTIVE">Active Only</option>
@@ -366,6 +403,7 @@ export const StallManagement: React.FC = () => {
 
       {/* Stall Table / Cards */}
       {loading ? (
+<<<<<<< HEAD
         <div className="p-12 text-center text-xs text-[#7c4d2e] flex items-center justify-center gap-2">
           <RotateCw size={18} className="animate-spin text-[#b85018]" />
           <span>Loading Khau Katta stalls registry...</span>
@@ -376,6 +414,18 @@ export const StallManagement: React.FC = () => {
             <table className="w-full text-left text-xs">
               <thead>
                 <tr className="border-b border-[#f0bd9b] bg-[#fff0e2] text-[#7c4d2e] font-bold uppercase tracking-wider">
+=======
+        <div className="p-12 text-center text-xs text-[#735442] flex items-center justify-center gap-2">
+          <RotateCw size={18} className="animate-spin text-[#c86228]" />
+          <span>Loading Khau Katta stalls registry...</span>
+        </div>
+      ) : filteredStalls.length > 0 ? (
+        <div className="bg-[#fffdfb]/95 rounded-3xl border border-[#eed7c2] shadow-xs overflow-hidden backdrop-blur-sm">
+          <div className="overflow-x-auto">
+            <table className="w-full text-left text-xs">
+              <thead>
+                <tr className="border-b border-[#eed7c2] bg-[#fdf8f3] text-[#9c7f6e] font-bold uppercase tracking-wider">
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
                   <th className="py-3.5 px-4">Stall Photo</th>
                   <th className="py-3.5 px-4">Stall &amp; Number</th>
                   <th className="py-3.5 px-4">Category</th>

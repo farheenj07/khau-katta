@@ -16,6 +16,7 @@ import {
   AdminStats,
   Cart,
   CartItem,
+<<<<<<< HEAD
   CartSummary,
   PickupVerificationRecord,
   PickupAuditLog,
@@ -24,6 +25,9 @@ import {
   DeliveryWaypoint,
   MLDeliveryPrediction,
   LocationLog
+=======
+  CartSummary
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
 } from '../types';
 
 export const roles: Role[] = [
@@ -387,12 +391,18 @@ export const orders: Order[] = [
     deliveryFee: 30,
     taxAmount: 0,
     totalAmount: 120,
+<<<<<<< HEAD
     status: 'preparing', // In progress
     createdAt: '2026-09-10T20:00:00Z',
     updatedAt: '2026-09-10T20:05:00Z',
     deliveryPartnerId: 'usr-deliv-01',
     deliveryPartnerName: 'Ramesh Naik',
     deliveryPartnerPhone: '9740098765'
+=======
+    status: 'preparing', // In progress, cannot be reviewed yet!
+    createdAt: '2026-09-10T20:00:00Z',
+    updatedAt: '2026-09-10T20:05:00Z'
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
   },
   {
     id: 'ord-004',
@@ -408,6 +418,7 @@ export const orders: Order[] = [
     status: 'delivered',
     createdAt: '2026-09-05T15:00:00Z',
     updatedAt: '2026-09-05T15:45:00Z'
+<<<<<<< HEAD
   },
   {
     id: 'ord-005',
@@ -426,6 +437,8 @@ export const orders: Order[] = [
     deliveryPartnerId: 'usr-deliv-01',
     deliveryPartnerName: 'Ramesh Naik',
     deliveryPartnerPhone: '9740098765'
+=======
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
   }
 ];
 
@@ -435,8 +448,12 @@ export const orderItems: OrderItem[] = [
   { id: 'item-03', orderId: 'ord-002', productId: 'prod-07', quantity: 1, unitPrice: 70, totalPrice: 70, productName: 'Special Sev Puri (6 pcs)', isReviewed: false },
   { id: 'item-04', orderId: 'ord-003', productId: 'prod-09', quantity: 2, unitPrice: 25, totalPrice: 50, productName: 'Special Masala Kadak Chai', isReviewed: false },
   { id: 'item-05', orderId: 'ord-003', productId: 'prod-11', quantity: 1, unitPrice: 40, totalPrice: 40, productName: 'Classic Bun Maska', isReviewed: false },
+<<<<<<< HEAD
   { id: 'item-06', orderId: 'ord-004', productId: 'prod-02', quantity: 1, unitPrice: 340, totalPrice: 340, productName: 'Dry Fruit Special Kunda (500g)', isReviewed: true },
   { id: 'item-07', orderId: 'ord-005', productId: 'prod-01', quantity: 2, unitPrice: 260, totalPrice: 520, productName: 'Classic Belgaum Kunda (500g)', isReviewed: false }
+=======
+  { id: 'item-06', orderId: 'ord-004', productId: 'prod-02', quantity: 1, unitPrice: 340, totalPrice: 340, productName: 'Dry Fruit Special Kunda (500g)', isReviewed: true }
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
 ];
 
 // Reviews database with verified orders
@@ -630,8 +647,13 @@ export function addToCart(
   }
 
   const stall = stalls.find(s => s.id === product.stallId);
+<<<<<<< HEAD
   if (!stall || stall.isActive === false || stall.status === 'INACTIVE' || stall.isOpen === false) {
     return { success: false, message: `"${stall?.name || 'This vendor'}" is currently CLOSED or not accepting orders.` };
+=======
+  if (!stall || stall.isActive === false || stall.status === 'INACTIVE') {
+    return { success: false, message: 'This stall is currently inactive or not accepting orders.' };
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
   }
 
   const cart = getOrCreateCart(userId);
@@ -810,6 +832,7 @@ export function deleteStall(id: string): { success: boolean; message?: string } 
   return { success: true };
 }
 
+<<<<<<< HEAD
 export function toggleStallOpenStatus(id: string, isOpen: boolean): Stall | null {
   const stall = stalls.find(s => s.id === id);
   if (!stall) return null;
@@ -1392,3 +1415,5 @@ export function updateDeliveryGps(
 }
 
 
+=======
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d

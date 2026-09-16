@@ -1,4 +1,5 @@
 import { Router, Request, Response } from 'express';
+<<<<<<< HEAD
 import {
   products,
   stalls,
@@ -8,6 +9,9 @@ import {
   toggleProductAvailability,
   deleteProduct
 } from '../data/db';
+=======
+import { products, stalls, getProductRating } from '../data/db';
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
 
 const router = Router();
 
@@ -54,6 +58,7 @@ router.get('/', (req: Request, res: Response) => {
   });
 });
 
+<<<<<<< HEAD
 // POST /api/products - Create a new menu item
 router.post('/', (req: Request, res: Response) => {
   const { name, stallId, price } = req.body;
@@ -155,4 +160,6 @@ router.delete('/:id', (req: Request, res: Response) => {
   });
 });
 
+=======
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
 export default router;

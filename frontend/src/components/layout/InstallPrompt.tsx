@@ -51,6 +51,7 @@ export const InstallPrompt: React.FC = () => {
   if (!showPrompt || isDismissed) return null;
 
   return (
+<<<<<<< HEAD
     <div className="bg-gradient-to-r from-[#291305] via-[#3d2314] to-[#291305] text-[#f8efe4] px-4 py-2.5 shadow-lg border-b border-[#f0bd9b]/20 relative z-30 transition-all font-sans">
       <div className="max-w-7xl mx-auto flex items-center justify-between gap-3">
         <div className="flex items-center gap-3">
@@ -61,6 +62,18 @@ export const InstallPrompt: React.FC = () => {
             <p className="font-bold flex items-center gap-1.5 text-white font-serif">
               <span>Install Khau Katta App</span>
               <span className="text-[10px] bg-[#b85018]/50 text-[#fff0e2] px-2 py-0.5 rounded font-semibold uppercase tracking-wider border border-[#f0bd9b]/30">
+=======
+    <div className="bg-gradient-to-r from-[#24150b] via-[#3a2012] to-[#24150b] text-[#f8efe4] px-4 py-2.5 shadow-lg border-b border-[#eed7c2]/20 relative z-30 transition-all">
+      <div className="max-w-7xl mx-auto flex items-center justify-between gap-3">
+        <div className="flex items-center gap-3">
+          <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-[#c86228] to-[#d97706] flex items-center justify-center text-white shadow-md flex-shrink-0">
+            <Smartphone size={16} />
+          </div>
+          <div className="text-xs">
+            <p className="font-bold flex items-center gap-1.5 text-white">
+              <span>Install Khau Katta App</span>
+              <span className="text-[10px] bg-[#c86228]/50 text-[#faebd7] px-2 py-0.5 rounded font-semibold uppercase tracking-wider border border-[#eed7c2]/30">
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
                 PWA
               </span>
             </p>
@@ -73,7 +86,11 @@ export const InstallPrompt: React.FC = () => {
         <div className="flex items-center gap-2">
           <button
             onClick={handleInstallClick}
+<<<<<<< HEAD
             className="px-3.5 py-1.5 bg-gradient-to-r from-[#b85018] to-[#d97706] hover:from-[#963e0e] hover:to-[#b45309] text-white font-bold text-xs rounded-xl shadow-md transition-all flex items-center gap-1.5 cursor-pointer"
+=======
+            className="px-3.5 py-1.5 bg-gradient-to-r from-[#c86228] to-[#d97706] hover:from-[#b0521e] hover:to-[#b45309] text-white font-bold text-xs rounded-xl shadow-md transition-all flex items-center gap-1.5 cursor-pointer"
+>>>>>>> 2d5cac8094c8604d7a92822b0517e8194337d80d
           >
             <Download size={13} />
             <span>Install</span>
