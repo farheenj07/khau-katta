@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ea580c"/>
+      <stop offset="50%" stop-color="#d97706"/>
+      <stop offset="100%" stop-color="#c2410c"/>
+    </linearGradient>
+  </defs>
+  <!-- App Background -->
+  <rect width="512" height="512" rx="112" fill="url(#grad)"/>
+  
+  <!-- Outer Arch Canopy -->
+  <path d="M96 256C96 168 168 102 256 102C344 102 416 168 416 256V300C416 312 406 322 394 322C382 322 372 312 372 300C372 312 362 322 350 322C338 322 328 312 328 300C328 312 318 322 306 322C294 322 284 312 284 300C284 312 274 322 262 322C250 322 240 312 240 300C240 312 230 322 218 322C206 322 196 312 196 300C196 312 186 322 174 322C162 322 152 312 152 300C152 312 142 322 130 322C118 322 108 312 108 300C108 312 96 312 96 300V256Z" fill="#FFFBEB"/>
+  
+  <!-- Traditional Terracotta Bowl -->
+  <path d="M160 322C160 384 204 424 256 424C308 424 352 384 352 322H160Z" fill="#FDE68A"/>
+  
+  <!-- Rising Flavor / Steam swirls -->
+  <path d="M210 74C210 50 230 40 230 20" stroke="#FFFBEB" stroke-width="20" stroke-linecap="round" fill="none"/>
+  <path d="M256 74C256 45 280 35 280 15" stroke="#FFFBEB" stroke-width="22" stroke-linecap="round" fill="none"/>
+  <path d="M302 74C302 50 322 40 322 20" stroke="#FFFBEB" stroke-width="20" stroke-linecap="round" fill="none"/>
+  
+  <!-- Artisan Emblem Gem -->
+  <circle cx="256" cy="235" r="28" fill="#B45309"/>
+</svg>
